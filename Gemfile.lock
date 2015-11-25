@@ -142,6 +142,8 @@ GEM
     rails-assets-jquery (2.1.4)
     rails-assets-jquery-cookie (1.4.1)
       rails-assets-jquery (>= 1.2)
+    rails-assets-jquery-visible (1.2.0)
+      rails-assets-jquery (> 1.6.0)
     rails-assets-momentjs (2.10.6)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -230,6 +232,7 @@ DEPENDENCIES
   rack-protection
   rails (~> 4.2.0)
   rails-assets-jquery-cookie!
+  rails-assets-jquery-visible!
   rails-assets-momentjs!
   responders (~> 2.0)
   rqrcode

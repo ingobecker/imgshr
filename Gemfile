@@ -36,5 +36,6 @@ gem 'yaml_db'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-cookie'
+  gem 'rails-assets-jquery-visible'
   gem 'rails-assets-momentjs'
 end

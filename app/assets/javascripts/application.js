@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery.infinite-pages
 //= require jquery-cookie
+//= require jquery-visible
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets

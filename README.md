@@ -33,6 +33,28 @@ Features
   (Inception v3 model)
 * GitHub login for taking track of galleries and gallery administration
 
+Setup
+-------
+
+Make sure you have a running version of docker as well as docker-compose installed. For a working development environment run the following commands:
+
+```
+$ git clone https://github.com/nning/imgshr.git
+$ cd imgshr
+$ docker-compose up
+$ docker-compose run imgshr rake db:setup
+```
+
+Point your browser to `http://localhost:3000`
+
+To run the tests:
+
+```
+$ docker-compose run imgshr rails test
+```
+
+Please make sure you set up the database properly before running the tests.
+
 License
 -------
 

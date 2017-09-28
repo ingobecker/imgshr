@@ -38,6 +38,8 @@ class Picture < ApplicationRecord
     after_create :enqueue_label_job
   end
 
+  after_create :enqueue_ocr_job, if: ->(p) { p.gallery.ocr? }
+
   scope :by_order_date, -> { order('order_date desc') }
   scope :by_created_at, -> { order('created_at desc') }
 
@@ -86,6 +88,16 @@ class Picture < ApplicationRecord
     self.raw_label_list = raw_label_list.to_json
     self.label_list = process.labels_above_threshold
 
+    save!
+  end
+
+  def perform_ocr!
+    e = Tesseract::Engine.new do |e|
+      e.language = :deu
+      e.page_segmentation_mode = :AUTO
+    end
+
+    self.ocr_text = e.text_for(image.path)
     save!
   end
 
@@ -229,5 +241,9 @@ class Picture < ApplicationRecord
 
   def enqueue_label_job
     LabelImageJob.set(wait: 25.seconds).perform_later(self)
+  end
+
+  def enqueue_ocr_job
+    OcrImageJob.perform_later(self)
   end
 end

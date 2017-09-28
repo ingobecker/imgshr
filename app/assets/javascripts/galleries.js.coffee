@@ -8,6 +8,15 @@ $(document).on 'content:update', ->
         gallery:
           endless_page: e.target.checked
 
+  box = $('#ocr')
+  box.change (e) ->
+    $.ajax
+      type: 'put',
+      url: box.data('uri'),
+      data:
+        gallery:
+          ocr: e.target.checked
+
   box = $('#read_only')
   box.change (e) ->
     $.ajax

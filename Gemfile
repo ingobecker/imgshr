@@ -33,6 +33,7 @@ gem 'sidekiq', '~> 5.0.0'
 gem 'sinatra', require: nil, git: 'https://github.com/sinatra/sinatra.git'
 gem 'spring', group: :development
 gem 'sqlite3'
+gem 'tesseract-ocr', git: 'https://github.com/meh/ruby-tesseract-ocr.git'
 gem 'therubyracer'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '~> 3.2'

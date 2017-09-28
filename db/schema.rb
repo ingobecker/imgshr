@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613194529) do
+ActiveRecord::Schema.define(version: 20170927183957) do
 
   create_table "boss_tokens", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "slug", null: false, collation: "utf8_bin"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20170613194529) do
     t.boolean "ratings_enabled", default: true, null: false
     t.boolean "endless_page", default: true, null: false
     t.boolean "device_links_only", default: false
+    t.boolean "ocr", default: false, null: false
     t.index ["slug"], name: "index_galleries_on_slug", unique: true
   end
 
@@ -77,6 +78,7 @@ ActiveRecord::Schema.define(version: 20170613194529) do
     t.integer "ratings_count"
     t.boolean "image_processing"
     t.text "raw_label_list"
+    t.text "ocr_text"
     t.index ["gallery_id"], name: "index_pictures_on_gallery_id"
     t.index ["image_fingerprint"], name: "index_pictures_on_image_fingerprint"
     t.index ["order_date"], name: "index_pictures_on_order_date"

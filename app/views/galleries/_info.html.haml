@@ -66,6 +66,17 @@
                   data: { uri: gallery_path(@gallery) }
 
             %tr
+              %td OCR
+              %td
+                %p
+                  = check_box_tag :ocr, nil,
+                    @gallery.ocr,
+                    data: { uri: gallery_path(@gallery) }
+                %p
+                  %strong Warning:
+                  All newly uploaded images are processed by OCR if turned on.
+
+            %tr
               %td Authorized devices only
               %td
                 %p

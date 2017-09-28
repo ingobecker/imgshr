@@ -15,6 +15,16 @@ GIT
       activerecord (>= 4.2.8)
 
 GIT
+  remote: https://github.com/meh/ruby-tesseract-ocr.git
+  revision: e0180d793cda4ad487364504df099ecbd5e30b28
+  specs:
+    tesseract-ocr (0.1.8)
+      call-me
+      ffi-extra
+      ffi-inline
+      iso-639
+
+GIT
   remote: https://github.com/sinatra/sinatra.git
   revision: 89cbd96866355729bb347a76ce601b98c3ff579b
   specs:
@@ -77,6 +87,8 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
+    call-me (0.0.2.3)
+      refining
     capybara (2.13.0)
       addressable
       mime-types (>= 1.16)
@@ -117,6 +129,10 @@ GEM
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    ffi-extra (0.1.0)
+      ffi
+    ffi-inline (0.0.4.3)
+      ffi (>= 0.4.0)
     foreman (0.84.0)
       thor (~> 0.19.1)
     fspath (3.1.0)
@@ -139,6 +155,7 @@ GEM
       image_optim (~> 0.19)
     image_size (1.5.0)
     in_threads (1.4.0)
+    iso-639 (0.2.8)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -254,6 +271,7 @@ GEM
       ffi (>= 0.5.0, < 2)
     redis (3.3.3)
     ref (2.0.0)
+    refining (0.0.5.5)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -357,6 +375,7 @@ DEPENDENCIES
   skylight
   spring
   sqlite3
+  tesseract-ocr!
   therubyracer
   turbolinks (~> 5)
   uglifier (~> 3.2)

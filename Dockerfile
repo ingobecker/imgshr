@@ -6,7 +6,11 @@ RUN set -ex; \
           qt5-default \
           libqt5webkit5-dev \
           gstreamer1.0-plugins-base \
-          gstreamer1.0-tools gstreamer1.0-x; \
+          gstreamer1.0-tools gstreamer1.0-x \
+          libleptonica-dev \
+          libtesseract-dev \
+          tesseract-ocr \
+          tesseract-ocr-deu; \
   rm -rf /var/lib/apt/lists/*
 
 ENV INSTALL_PATH /app
